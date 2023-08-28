@@ -198,6 +198,10 @@ position: relative;
     display: block;
 }
 
+#services h2{
+    color: red;
+}
+
 #projects{
     padding:30px 0;
 }
