@@ -198,10 +198,6 @@ position: relative;
     display: block;
 }
 
-#services h2{
-    color: red;
-}
-
 #projects{
     padding:30px 0;
 }
@@ -339,6 +335,20 @@ position: relative;
     background: #ff004f;
 }
 
+
+
+/*skill proficiency*/
+.progress {
+    height: 20px;
+    width: 100%;
+    background-color: #f0f0f0;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background-color: #3498db;
+  }
+  
 
 
 
