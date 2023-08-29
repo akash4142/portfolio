@@ -67,3 +67,43 @@
 
         seeMoreButton.style.display = "none";
     });
+
+
+const skills=[
+    {languages:"C",proficiency:80},
+    {languages:"C++",proficiency:80},
+    {languages:"Python",proficiency:80},
+    {languages:"Javascript",proficiency:80},
+    {languages:"Html/Html5",proficiency:80},
+    {languages:"CSS",proficiency:80},
+    {languages:"Node.js",proficiency:80},
+    {languages:"SQL",proficiency:80},
+    {languages:"MongoDB",proficiency:80},
+    {languages:"Postgrad",proficiency:80},
+    {languages:"DSA",proficiency:80},
+    {languages:"UNIX/LINUX",proficiency:80},
+    {languages:"Excel",proficiency:80},
+    {languages:"Microsoft 365",proficiency:80},
+    {languages:"Git",proficiency:80},
+]
+
+const skillList = document.getElementById("#skill-list");
+
+skills.forEach(skill=>{
+    const skillItem = document.createElement('li');
+    const progressBar = document.createElement('div');
+    progressBar.classList.add("progress-bar");
+
+    if(skills.proficiency>50){
+        progressBar.style.background="red";
+    }else{
+        progressBar.style.background=`hsl(${120 - (skill.proficiency * 1.2)}, 100%, 50%)`;
+    }
+
+    progressBar.style.width=`${skill.proficiency}%`;
+
+    skillItem.innerHTML = `${skill.languages} <div class="progress">${progressBar.outerHTML}</div>`;
+    skillItem.appendChild(skillItem);
+
+
+})
