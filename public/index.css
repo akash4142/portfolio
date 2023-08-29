@@ -104,14 +104,14 @@ position: relative;
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
-    animation: fadeText 8s linear infinite;
+    animation: fadeText 5s linear infinite;
 }
 
 .name-fade {
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
-    animation: nameFade 8s linear infinite;
+    animation: nameFade 5s linear infinite;
 }
 
 @keyframes fadeText {
