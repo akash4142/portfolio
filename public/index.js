@@ -1,18 +1,17 @@
 const skills=[
-    {languages:"C",proficiency:80},
-    {languages:"C++",proficiency:80},
+    {languages:"C",proficiency:85},
+    {languages:"C++",proficiency:90},
     {languages:"Python",proficiency:80},
-    {languages:"Javascript",proficiency:80},
-    {languages:"Html/Html5",proficiency:80},
+    {languages:"Javascript",proficiency:85},
+    {languages:"Html/Html5",proficiency:90},
     {languages:"CSS",proficiency:80},
-    {languages:"Node.js",proficiency:80},
+    {languages:"Node.js",proficiency:90},
     {languages:"SQL",proficiency:80},
-    {languages:"MongoDB",proficiency:80},
-    {languages:"Postgrad",proficiency:80},
-    {languages:"DSA",proficiency:80},
-    {languages:"UNIX/LINUX",proficiency:80},
-    {languages:"Excel",proficiency:80},
-    {languages:"Microsoft 365",proficiency:80},
+    {languages:"MongoDB",proficiency:85},
+    {languages:"Postgrad",proficiency:85},
+    {languages:"UNIX/LINUX",proficiency:75},
+    {languages:"Excel",proficiency:90},
+    {languages:"Microsoft 365",proficiency:85},
     {languages:"Git",proficiency:80},
 ]
 
@@ -23,13 +22,22 @@ skills.forEach(skill => {
     const progressBar = document.createElement('div');
     progressBar.classList.add("progress-bar")
 
+   let color;
     if (skill.proficiency < 50) {
-        progressBar.style.background = 'red';
+        color = 'red';
     } else {
-        progressBar.style.background = `hsl(${120 - (skill.proficiency * 1.2)}, 100%, 50%)`;
+        color = 'lightgreen';
     }
 
-    progressBar.style.width = `${skill.proficiency}%`;
+
+ progressBar.style.backgroundImage = `linear-gradient(to right, ${color} ${skill.proficiency}%, transparent ${skill.proficiency}%, transparent 100%)`;
+    progressBar.style.width = '100%';
+    
+const proficiencyValue = document.createElement('span');
+    proficiencyValue.classList.add('proficiency-value');
+    proficiencyValue.textContent = skill.proficiency;
+    progressBar.appendChild(proficiencyValue);
+
 
     skillItem.innerHTML = `${skill.languages} <div class="progress">${progressBar.outerHTML}</div>`;
     skillList.appendChild(skillItem);
