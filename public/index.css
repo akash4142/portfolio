@@ -356,8 +356,16 @@ position: relative;
 
 #skillsproficiency ul li{
     margin-top: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
+
+.proficiency-value {
+position:absolute;
+transform:translateX(100%);
+    color: black; /* You can adjust the color as needed */
+}
+
+
 
 
 
