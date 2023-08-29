@@ -95,6 +95,10 @@ nav ul li a:hover::after{
 position: relative;
 }
 
+.space {
+    display: inline-block;
+    width: 20px; 
+}
 
 .fade-text {
     display: inline-block;
