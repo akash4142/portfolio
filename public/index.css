@@ -266,6 +266,7 @@ position: relative;
     position: relative;
     overflow: hidden;
     display: none;
+    height:200px;
 }
 
 .work img{
@@ -273,6 +274,7 @@ position: relative;
     border-radius: 10px;
     display: block;
     transition: transform 0.5s;
+    object-fit:cover;
 }
 
 .layer{
